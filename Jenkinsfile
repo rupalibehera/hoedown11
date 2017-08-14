@@ -39,6 +39,8 @@ mavenNode{
     container(name: 'maven') {
 
       stage('Build Release'){
+        echo "******************"
+        echo "${canaryVersion}"
         mavenCanaryRelease {
           version = canaryVersion
         }
